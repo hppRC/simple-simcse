@@ -185,6 +185,13 @@ We hope that this implementation will help in understanding and facilitate futur
 
 ## Citation
 
+Author: [Hayato Tsukagoshi](https://hpprc.dev)
+
+If you would like to collaborate with me, please feel free to contact me at the email address below.
+
+[research.tsukagoshi.hayato@gmail.com](mailto:research.tsukagoshi.hayato@gmail.com)
+
+
 ```bibtex
 @misc{
   hayato-tsukagoshi-2022-simple-simcse,
