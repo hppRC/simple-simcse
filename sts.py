@@ -247,14 +247,20 @@ class STSEvaluation:
     def __call__(
         self,
         encode: Callable[[List[str]], Tensor],
+        progress_bar: bool = True,
     ) -> Dict[str, float]:
 
         results = {}
-        for name, evaluator in tqdm(
-            list(self.sts_evaluators.items()),
-            dynamic_ncols=True,
-            leave=False,
-        ):
+        if progress_bar:
+            iterator = tqdm(
+                list(self.sts_evaluators.items()),
+                dynamic_ncols=True,
+                leave=False,
+            )
+        else:
+            iterator = list(self.sts_evaluators.items())
+
+        for name, evaluator in iterator:
             results[name] = evaluator(encode=encode)
 
         results["avg"] = sum(results.values()) / len(results)

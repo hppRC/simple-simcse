@@ -1,3 +1,5 @@
+# if you want to perform evaluation only, you can use this snippet ↓
+
 import json
 from pathlib import Path
 from typing import List
